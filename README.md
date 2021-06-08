@@ -8,3 +8,6 @@ This SPA(Single Page Application) uses a Rails API for the backend. (https://git
 
 ##Starting The Application
 
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/David-P-Molina/strange-conversion-calculator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/David-P-Molina/strange-conversion-calculator/CODE_OF_CONDUCT.md).
