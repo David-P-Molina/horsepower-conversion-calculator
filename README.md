@@ -1,0 +1,2 @@
+# Strange Conversion Calculator
+Thank You for using the Strange Conversion Calculator! Have you ever wondered how many squirrels it would take to power your car, or how many squirrels it would take to power a lightbulb? Now there is an app for that.
