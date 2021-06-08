@@ -4,9 +4,9 @@ Have you ever wondered how many squirrels it would take to power your car, or ho
 You will have the ability to calculate these numbers and submit your own units of measurement(to be approved by an admin.).
 This SPA(Single Page Application) uses a Rails API for the backend. (https://github.com/David-P-Molina/strange-conversion-calculator-backend)
 
-##Installation
+## Installation
 
-##Starting The Application
+## Starting The Application
 
 ## Contributing
 
