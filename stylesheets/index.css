@@ -19,3 +19,17 @@ body {
     font-size: 2rem;
     margin: .5rem;
 }
+
+.conversion-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.conversion-links li {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding:1rem;
+    display: block;
+}
