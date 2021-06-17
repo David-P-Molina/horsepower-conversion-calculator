@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-.navbar {
+.menulist {
     margin-left: 3rem;
     margin-right: 3rem;
     padding: 0rem;
@@ -18,13 +18,13 @@ body {
     color: white;
 }
 
-.conversion-links ul {
+.conversion-items ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.conversion-links li {
+.conversion-items li {
     list-style: none;
     text-decoration: none;
     color: white;
@@ -32,6 +32,6 @@ body {
     display: block;
 }
 
-.conversion-links li:hover {
+.conversion-items li:hover {
     background-color: black;
 }
