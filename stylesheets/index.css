@@ -36,3 +36,9 @@ body {
 .conversion-items li:hover {
     background-color: black;
 }
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    width: 20%
+}
