@@ -42,3 +42,9 @@ table {
     border-collapse: separate;
     width: 20%
 }
+
+td, th {
+    border: 1px slategrey;
+    text-align: left;
+    padding: 2%;
+}
