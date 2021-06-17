@@ -1,9 +1,5 @@
-const standardToStrangeConversion = document.getElementById('standard-strange')
-const strangeToStrangeConversion = document.getElementById('strange-strange')
-const fullComparisonChart = document.getElementById('full-comparison-chart')
-const exampleConversion = document.getElementById('example-conversions')
-// fill out function that creates a form based on the selection
-standardToStrangeConversion.addEventListener('click', () => {})
-strangeToStrangeConversion.addEventListener('click', () => {})
-fullComparisonChart.addEventListener('click', () => {})
+const homeBtn = document.getElementById('home-btn')
+const exampleConversions = document.getElementById('example0conversions')
+const userCreatedConversions = document.getElementById('create-ur-own-conversions')
+const sources = document.getElementById('sources')
 exampleConversion.addEventListener('click', () => {})
