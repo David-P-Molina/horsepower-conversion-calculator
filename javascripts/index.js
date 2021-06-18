@@ -1,3 +1,5 @@
+const baseUrl = "http://localhost:3000/"
+
 const homeBtn = document.getElementById('home-btn')
 const exampleConversions = document.getElementById('example0conversions')
 const userCreatedConversions = document.getElementById('create-ur-own-conversions')
