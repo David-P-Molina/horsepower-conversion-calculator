@@ -15,6 +15,13 @@ class Conversion {
     }
 
     static findByName(name) {
-        this.all.find((conversion) => conversion.name === name) 
+        this.all.find(conversion => conversion.name === name) 
+    }
+    static findById(id) {
+        this.all.find(conversion => conversion.id === id) 
+    }
+
+    static findOrCreateBy(conversionObj) {
+        this.findByName(conversionObj.name) || new Conversion
     }
 }
