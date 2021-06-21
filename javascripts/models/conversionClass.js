@@ -1,4 +1,6 @@
 class Conversion {
+    static all = [];
+    
     constructor(id, name, hp_quantity, animal_conversion_quantity, user_id) {
         this.id = id;
         this.name = name;
