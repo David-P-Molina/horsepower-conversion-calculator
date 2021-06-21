@@ -15,6 +15,6 @@ class User {
 
     }
     static findOrCreateBy(userObj) {
-        this.findByName(userObj.username) || new Conversion(userObj)
+        this.findByName(userObj.username) || new User(userObj)
     }
 }

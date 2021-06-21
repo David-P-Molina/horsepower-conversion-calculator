@@ -18,6 +18,6 @@ class Measurement {
 
     }
     static findOrCreateBy(measureObj) {
-        this.findByName(measureObj.name) || new Conversion(measureObj)
+        this.findByName(measureObj.name) || new Measure(measureObj)
     }
 }
