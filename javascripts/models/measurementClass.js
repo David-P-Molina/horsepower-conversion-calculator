@@ -9,4 +9,15 @@ class Measurement {
         this.standard = standard;
         Measurement.all.push(this);
     }
+    static getAll() {
+        return this.all
+    }
+
+    static findByName(name) {
+        this.all.find(measurement => measurement.name === name) 
+
+    }
+    static findOrCreateBy(measureObj) {
+        this.findByName(measureObj.name) || new Conversion(measureObj)
+    }
 }
