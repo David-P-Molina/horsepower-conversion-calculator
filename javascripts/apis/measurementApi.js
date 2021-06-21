@@ -5,7 +5,7 @@ class measurementApi {
     fetch('http://localhost:3000/measurements')
     .then(response => response.json())
     .then(json => {debugger})
-    .catch(this.handleError)
+    .catch(handleError)
     }
 
     static handleError(error) {

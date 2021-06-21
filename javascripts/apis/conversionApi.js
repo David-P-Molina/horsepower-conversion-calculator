@@ -3,7 +3,7 @@ class ConversionApi {
         fetch('http://localhost:3000/conversions')
         .then(response => response.json())
         .then(json => {debugger}json.data.forEach(conversionObj => Conversion.findOrCreateBy(conversionObj)))
-        .catch(this.handleError)
+        .catch(handleError)
     }
     
     static handleError(error) {
