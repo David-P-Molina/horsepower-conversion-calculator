@@ -3,6 +3,9 @@ const homeBtn = document.getElementById('home-btn')
 const exampleConversions = document.getElementById('example0conversions')
 const userCreatedConversions = document.getElementById('create-ur-own-conversions')
 const sources = document.getElementById('sources')
+const sidebar = document.getElementById('sidebar-comparison')
+const hpInput = document.getElementById('horsepower-number-input')
+const table = document.getElementsByTagName('table')
 
 homeBtn.addEventListener('click', handleHomeBtn)
 exampleConversions.addEventListener('click', handleExampleConversions)
@@ -21,15 +24,12 @@ function handleUserFormShow(e) {
 function handleSourceList(e) {
     //
 }
-const sidebar = document.getElementsByClassName('sidebar-comparison')
-const hpInput = document.getElementById('horsepower-number-input')
-const table = document.getElementsByTagName('table')
 
-hpInput.addEventListener('input', updateAnimalPowerValue);
-let animals = []
-const updateAnimalPowerValue = (e) => {
-    animals.calculateHpValue = // eventlistener
-}
+// hpInput.addEventListener('input', updateAnimalPowerValue);
+// let animals = []
+// const updateAnimalPowerValue = (e) => {
+//     animals.calculateHpValue = 1// event listener
+// }
 
 const calculateHpValue = (array) => {
     array.map // takes each animal object and multiply the input by the animals hp equivalent 

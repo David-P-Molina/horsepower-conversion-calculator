@@ -25,7 +25,4 @@ class Conversion {
         this.findByName(conversionObj.name) || new Conversion(conversionObj)
     }
 
-    static render() {
-        this.all.forEach(conversion => conversion.something)
-    }
 }
