@@ -9,4 +9,12 @@ class Conversion {
         this.user_id = user_id;
         Conversion.all.push(this);
     }
+
+    static getAll() {
+        return this.all
+    }
+
+    static findByName(name) {
+        this.all.find((conversion) => conversion.name === name) 
+    }
 }
