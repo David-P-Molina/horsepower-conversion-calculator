@@ -1,6 +1,7 @@
+const mainDisplay = document.getElementById('main-display')
 const baseUrl = "http://localhost:3000/"
 const homeBtn = document.getElementById('home-btn')
-const exampleConversions = document.getElementById('example0conversions')
+const exampleConversions = document.getElementById('example-conversions')
 const userCreatedConversions = document.getElementById('create-ur-own-conversions')
 const sources = document.getElementById('sources')
 const sidebar = document.getElementById('sidebar-comparison')
@@ -9,20 +10,18 @@ const table = document.getElementsByTagName('table')
 
 homeBtn.addEventListener('click', handleHomeBtn)
 exampleConversions.addEventListener('click', handleExampleConversions)
-userCreatedConversions.addEventListener('click', handleUserFormShow)
-sources.addEventListener('click', handleSourceList)
+userCreatedConversions.addEventListener('click', User.handleUserFormShow)
+sources.addEventListener('click', Measurement.handleSourceList)
 
 function handleHomeBtn(e) {
     //
-}
+    mainDisplay.innerHTML = "<h1>Thank You for using the Horse-Power Converter! </h1>"
+
+    }
 function handleExampleConversions(e) {
     //
-}
-function handleUserFormShow(e) {
-    //
-}
-function handleSourceList(e) {
-    //
+    mainDisplay.innerHTML = ""
+    Conversion.getAll().forEach(conv => conv.render())
 }
 
 // hpInput.addEventListener('input', updateAnimalPowerValue);
@@ -31,7 +30,3 @@ function handleSourceList(e) {
 //     animals.calculateHpValue = 1// event listener
 // }
 
-const calculateHpValue = (array) => {
-    array.map // takes each animal object and multiply the input by the animals hp equivalent 
-    // & sets table column value to that  
-}

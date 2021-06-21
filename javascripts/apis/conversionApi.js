@@ -2,11 +2,15 @@ class ConversionApi {
     static fetchConversions() {
         fetch('http://localhost:3000/conversions')
         .then(response => response.json())
-        .then(json => json.data.forEach(conversionObj => Conversion.findOrCreateBy(conversionObj)))
+        .then(json => json.data.forEach(conversionObj =>{
+            const conversion = Conversion.findOrCreateBy(conversionObj)
+            conversion.render()
+        }))
         .catch(handleError)
     }
     
     static handleError(error) {
         console.log(error)
     }
+    
 }
