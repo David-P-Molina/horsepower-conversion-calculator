@@ -5,11 +5,20 @@ const userCreatedConversions = document.getElementById('create-ur-own-conversion
 const sources = document.getElementById('sources')
 
 homeBtn.addEventListener('click', handleHomeBtn)
-exampleConversions.addEventListener('click', () => {})
-userCreatedConversions.addEventListener('click', () => {})
-sources.addEventListener('click', () => {})
+exampleConversions.addEventListener('click', handleExampleConversions)
+userCreatedConversions.addEventListener('click', handleUserFormShow)
+sources.addEventListener('click', handleSourceList)
 
 function handleHomeBtn(e) {
+    //
+}
+function handleExampleConversions(e) {
+    //
+}
+function handleUserFormShow(e) {
+    //
+}
+function handleSourceList(e) {
     //
 }
 const sidebar = document.getElementsByClassName('sidebar-comparison')
