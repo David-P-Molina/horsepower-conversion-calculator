@@ -8,9 +8,11 @@ const sidebar = document.getElementById('sidebar-comparison')
 const table = document.getElementsByTagName('table')
 const hpCount = document.getElementById('hp-number')
 const resetBtn = document.getElementById('reset-btn')
+const pauseBtn = document.getElementById('pause-btn')
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
     resetBtn.addEventListener('click', resetHpNumber)
+    pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
     exampleConversions.addEventListener('click', handleExampleConversions)
     userCreatedConversions.addEventListener('click', User.handleUserFormShow)
