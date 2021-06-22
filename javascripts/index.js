@@ -27,6 +27,13 @@ const startHpCounter = () => {
 const resetHpNumber = (e) => {
     hpCount.innerText = "0"
 }
+const isIncrementing = () => {
+    return (pauseBtn.innerText === "Pause") ? true : false
+}
+const pauseHpNumber = (e) => {
+
+}
+
 function handleHomeBtn(e) {
     //
     mainDisplay.innerHTML = "<h1>Thank You for using the Horse-Power Converter! </h1>"
