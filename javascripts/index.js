@@ -8,11 +8,23 @@ const sidebar = document.getElementById('sidebar-comparison')
 const table = document.getElementsByTagName('table')
 const hpCount = document.getElementById('hp-number')
 
-homeBtn.addEventListener('click', handleHomeBtn)
-exampleConversions.addEventListener('click', handleExampleConversions)
-userCreatedConversions.addEventListener('click', User.handleUserFormShow)
-sources.addEventListener('click', Measurement.handleSourceList)
+document.addEventListener("DOMContentLoaded", () => {
+    startHpCounter();
+    homeBtn.addEventListener('click', handleHomeBtn)
+    exampleConversions.addEventListener('click', handleExampleConversions)
+    userCreatedConversions.addEventListener('click', User.handleUserFormShow)
+    sources.addEventListener('click', Measurement.handleSourceList)
+})
 
+const startHpCounter = () => {
+
+}
+
+let interval = setInterval(incrementHp, 1000)
+
+function incrementHp(){
+    hpCount.innerText = parseInt(hpCount.innerText) + 1
+}
 function handleHomeBtn(e) {
     //
     mainDisplay.innerHTML = "<h1>Thank You for using the Horse-Power Converter! </h1>"
