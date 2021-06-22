@@ -9,6 +9,7 @@ const table = document.getElementsByTagName('table')
 const hpCount = document.getElementById('hp-number')
 const resetBtn = document.getElementById('reset-btn')
 const pauseBtn = document.getElementById('pause-btn')
+
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
     resetBtn.addEventListener('click', resetHpNumber)
@@ -19,19 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
     sources.addEventListener('click', Measurement.handleSourceList)
 })
 
+const isIncrementing = () => {
+    return (pauseBtn.innerText === "Pause") ? true : false
+}
 const startHpCounter = () => {
-    setInterval(() => {
+    setInterval(addOneHp, 1500)
+}
+const addOneHp = () => {
+    if (isIncrementing()) {
         hpCount.innerText = parseInt(hpCount.innerText) + 1
-    },1500)
+    } 
 }
 const resetHpNumber = (e) => {
     hpCount.innerText = "0"
 }
-const isIncrementing = () => {
-    return (pauseBtn.innerText === "Pause") ? true : false
-}
 const pauseHpNumber = (e) => {
-
+    pauseBtn.innerText = (pauseBtn.innerText === "Pause") ? "Resume" : "Pause"
 }
 
 function handleHomeBtn(e) {
