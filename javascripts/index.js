@@ -7,9 +7,10 @@ const sources = document.getElementById('sources')
 const sidebar = document.getElementById('sidebar-comparison')
 const table = document.getElementsByTagName('table')
 const hpCount = document.getElementById('hp-number')
-
+const resetBtn = document.getElementById('reset-btn')
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
+    resetBtn.addEventListener('click', resetHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
     exampleConversions.addEventListener('click', handleExampleConversions)
     userCreatedConversions.addEventListener('click', User.handleUserFormShow)
@@ -20,6 +21,9 @@ const startHpCounter = () => {
     setInterval(() => {
         hpCount.innerText = parseInt(hpCount.innerText) + 1
     },1500)
+}
+const resetHpNumber = (e) => {
+    hpCount.innerText = "0"
 }
 function handleHomeBtn(e) {
     //
