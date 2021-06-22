@@ -17,13 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const startHpCounter = () => {
-
-}
-
-let interval = setInterval(incrementHp, 1000)
-
-function incrementHp(){
-    hpCount.innerText = parseInt(hpCount.innerText) + 1
+    setInterval(() => {
+        hpCount.innerText = parseInt(hpCount.innerText) + 1
+    },1500)
 }
 function handleHomeBtn(e) {
     //
