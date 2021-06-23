@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
-    multiplyAnimalHpEquivalent();
     resetBtn.addEventListener('click', resetHpNumber)
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
@@ -14,6 +13,7 @@ const isIncrementing = () => {
 }
 const startHpCounter = () => {
     setInterval(addOneHp, 1500)
+    setInterval(multiplyAnimalHpEquivalent,1500)
 }
 const addOneHp = () => {
     if (isIncrementing()) {
@@ -28,7 +28,9 @@ const pauseHpNumber = (e) => {
 }
 
 const multiplyAnimalHpEquivalent = () => {
-
+    for (i = 0; i < test.length; i++) {
+    hpEquivalentArray[i].innerText = parseInt(hpCount.innerText) * parseFloat(animalRatioArray[i].innerText)
+    }
 }
 function handleHomeBtn(e) {
     //
