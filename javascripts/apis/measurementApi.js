@@ -2,7 +2,7 @@ class MeasurementApi {
     static url = `${baseUrl}/measurements`
     
     static fetchMeasurements() {
-    fetch(MeasurementApi.url)
+    fetch(this.url)
     .then(response => response.json())
     .then(json => renderMeasurements(json.data))
     .catch(handleError)
