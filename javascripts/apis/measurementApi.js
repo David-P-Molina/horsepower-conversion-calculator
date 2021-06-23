@@ -1,3 +1,4 @@
+
 class MeasurementApi {
     static url = `${baseUrl}/measurements`
     
@@ -7,12 +8,7 @@ class MeasurementApi {
     .then(json => json.data.forEach(obj => {
         Measurement.findOrCreateBy(obj.attributes)
     }))
-    .catch(handleError)
+    // .catch(handleError)
     }
 
-    static handleError(error) {
-        console.log(error)
     }
-    }
-
-
