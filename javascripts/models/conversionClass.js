@@ -29,8 +29,5 @@ class Conversion {
         //will display and render this.(conversion) on the page.
         //append to mainDisplay div to display current conversion
     }
-    calculateHpValue(array) {
-        array.map // takes each animal object and multiply the input by the animals hp equivalent 
-        // & sets table column value to that  
-    }
+    
 }

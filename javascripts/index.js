@@ -29,7 +29,7 @@ const pauseHpNumber = (e) => {
 
 const multiplyAnimalHpEquivalent = () => {
     for (i = 0; i < animalRatioArray.length; i++) {
-    hpEquivalentArray[i].innerText = parseInt(hpCount.innerText) * parseFloat(animalRatioArray[i].innerText)
+    hpEquivalentArray[i].innerText = (parseInt(hpCount.innerText) * parseFloat(animalRatioArray[i].innerText)).toFixed(2)
     }
 }
 function handleHomeBtn(e) {
@@ -42,10 +42,3 @@ function handleExampleConversions(e) {
     mainDisplay.innerHTML = ""
     Conversion.getAll().forEach(conv => conv.render())
 }
-
-// hpInput.addEventListener('input', updateAnimalPowerValue);
-// let animals = []
-// const updateAnimalPowerValue = (e) => {
-//     animals.calculateHpValue = 1// event listener
-// }
-
