@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     userCreatedConversions.addEventListener('click', User.handleUserFormShow)
     sources.addEventListener('click', Measurement.handleSourceList)
 })
+//Main-Section Functionality
 
+//Side-Bar Functionality
 const isIncrementing = () => {
     return (pauseBtn.innerText === "Pause") ? true : false
 }
@@ -31,14 +33,4 @@ const multiplyAnimalHpEquivalent = () => {
     for (i = 0; i < animalRatioArray.length; i++) {
     hpEquivalentArray[i].innerText = (parseInt(hpCount.innerText) * parseFloat(animalRatioArray[i].innerText)).toFixed(2)
     }
-}
-function handleHomeBtn(e) {
-    //
-    mainDisplay.innerHTML = "<h1>Thank You for using the Horse-Power Converter! </h1>"
-
-    }
-function handleExampleConversions(e) {
-    //
-    mainDisplay.innerHTML = ""
-    Conversion.getAll().forEach(conv => conv.render())
 }
