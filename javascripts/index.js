@@ -28,7 +28,7 @@ const pauseHpNumber = (e) => {
 }
 
 const multiplyAnimalHpEquivalent = () => {
-    for (i = 0; i < test.length; i++) {
+    for (i = 0; i < animalRatioArray.length; i++) {
     hpEquivalentArray[i].innerText = parseInt(hpCount.innerText) * parseFloat(animalRatioArray[i].innerText)
     }
 }
