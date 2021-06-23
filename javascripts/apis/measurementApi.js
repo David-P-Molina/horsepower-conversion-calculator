@@ -5,7 +5,7 @@ class MeasurementApi {
     fetch(this.url)
     .then(response => response.json())
     .then(json => json.data.forEach(obj => {
-        MeasurementApi.findOrCreateBy(obj.attributes)
+        Measurement.findOrCreateBy(obj.attributes)
     }))
     .catch(handleError)
     }

@@ -18,7 +18,7 @@ class Measurement {
 
     }
     static findOrCreateBy(measureObj) {
-        this.findByName(measureObj.name) || new Measure(measureObj)
+        this.findByName(measureObj.name) || new Measurement(measureObj)
     }
     static handleSourceList(e) {
         //
