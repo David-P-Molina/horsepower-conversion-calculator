@@ -1,8 +1,8 @@
 class measurementApi {
-    // static url = `${baseUrl}/measurements`
+    static url = `${baseUrl}/measurements`
     
     static fetchMeasurements() {
-    fetch('http://localhost:3000/measurements')
+    fetch(MeasurementApi.url)
     .then(response => response.json())
     .then(json => {debugger})
     .catch(handleError)

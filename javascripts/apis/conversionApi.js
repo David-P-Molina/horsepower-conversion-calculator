@@ -1,6 +1,7 @@
 class ConversionApi {
+    static url = `${baseUrl}/conversions`
     static fetchConversions() {
-        fetch('http://localhost:3000/conversions')
+        fetch(ConversionApi.url)
         .then(response => response.json())
         .then(json => json.data.forEach(conversionObj =>{
             const conversion = Conversion.findOrCreateBy(conversionObj)
