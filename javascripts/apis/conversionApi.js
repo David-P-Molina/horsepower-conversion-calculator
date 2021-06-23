@@ -3,11 +3,11 @@ class ConversionApi {
     static fetchConversions() {
         fetch(this.url)
         .then(response => response.json())
-        .then(json => json.data.forEach(conversionObj =>{
-            const conversion = Conversion.findOrCreateBy(conversionObj)
-            conversion.render()
+        .then(json => json.data.forEach(obj => {
+            let object = obj.attributes
+            Conversion.findOrCreateBy(object)
         }))
-        .catch(handleError)
+        // .catch(handleError)
     }
     
     static handleError(error) {
