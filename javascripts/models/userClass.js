@@ -17,7 +17,7 @@ class User {
     static findOrCreateBy(userObj) {
         this.findByName(userObj.username) || new User(userObj)
     }
-    static handleUserFormShow(e) {
+    static handleUserFormShow() {
         mainDisplay.innerHTML = 
         `<form>
         <label for="username">UserName</label>
