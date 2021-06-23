@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
+    multiplyAnimalHpEquivalent();
     resetBtn.addEventListener('click', resetHpNumber)
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
@@ -26,6 +27,9 @@ const pauseHpNumber = (e) => {
     pauseBtn.innerText = (pauseBtn.innerText === "Pause") ? "Resume" : "Pause"
 }
 
+const multiplyAnimalHpEquivalent = () => {
+
+}
 function handleHomeBtn(e) {
     //
     mainDisplay.innerHTML = "<h1>Thank You for using the Horse-Power Converter! </h1>"
