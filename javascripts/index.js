@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
+    getFetchCalls();
     resetBtn.addEventListener('click', resetHpNumber)
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
@@ -7,8 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     userCreatedConversions.addEventListener('click', User.handleUserFormShow)
     sources.addEventListener('click', Measurement.handleSourceList)
 })
+//Fetch Calls
+const getFetchCalls = () => {
+    MeasurementApi.fetchMeasurements()
+    ConversionApi.fetchConversions()
+}
 //Main-Section Functionality
-
 //Side-Bar Functionality
 const isIncrementing = () => {
     return (pauseBtn.innerText === "Pause") ? true : false
