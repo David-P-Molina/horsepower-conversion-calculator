@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
     // exampleConversions.addEventListener('click', handleExampleConversions)
-    userCreatedConversions.addEventListener('click', User.handleUserFormShow)
     sources.addEventListener('click', Measurement.handleSourceList)
+    userCreatedConversions.addEventListener('click', loadSubmissionForms)
     //usernameSubmit().addEventListener('submit', UserApi.submitUsername)
 })
 //Fetch Calls
@@ -19,6 +19,10 @@ const handleHomeBtn = () => {
     mainDisplay.innerHTML = `<h1>Calculate the strength of Various Animals</h1>
     <p>Have you ever wondered how many squirrels it would take to power your car, or how many ducks it would take to launch a space shuttle?? Now there is an app for that.
     You will have the ability to calculate these numbers. Just create a username and add type in the hp value to calculate the value you are looking for.</p>`
+}
+const loadSubmissionForms = () => {
+    User.handleUserFormShow();
+    Conversion.handleConversionForm();
 }
 
 //Side-Bar Functionality

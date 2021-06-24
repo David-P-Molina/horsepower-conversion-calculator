@@ -18,15 +18,17 @@ class User {
         this.findByName(userObj.username) || new User(userObj)
     }
     static handleUserFormShow() {
-        mainDisplay.innerHTML = 
-        `<form>
-        <label for="username">UserName</label>
-        <input type="text" id="username"></input>
-        <input type="submit" value="submit">
-        </form>`
+        const userForm =
+        `<form id="user-submit-form">
+            <label for="username">UserName</label>
+            <input type="text" id="username"></input>
+            <label for="submit"><input type="submit" value="submit"></label>
+        </form>
+        `
+        userFormDiv.innerHTML = userForm
     }
     getUserConversions() {
-        return Conversion.all.filter(convert => this.id === convert.user_id
+        return Conversion.all.filter(convert => this.id === convert.user_id)
     }
     //create a username display and a way to add a new username
 }

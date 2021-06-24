@@ -27,14 +27,17 @@ class Conversion {
         this.findByName(conversionObj.name) || new Conversion(conversionObj)
     }
     static handleConversionForm() {
-        mainDisplay.innerHTML = `
+    const conversionForm =
+    `<fieldset disabled="disabled">
         <h1>New Conversion</h1>
-        <form action="${ConversionApi.url} method="POST">
-        <label for="username">UserName</label>
-        <label for="conversion name">Conversion Name:</label>
-        <label for="horse-power-value">HP Amount:</label>
-        <label for="animal-power-value">Alternate Animal Power</label>
-        </form>`
+        <form action="${Conversion.url}" method="POST">
+            <label for="username">UserName</label>
+            <label for="conversion name">Conversion Name:</label>
+            <label for="horse-power-value">HP Amount:</label>
+            <label for="animal-power-value">Alternate Animal Power</label>
+        </form>
+    </fieldset>`
+    newConversionForm.innerHTML = conversionForm
     }
     render() {
         //will display and render this.(conversion) on the page.
