@@ -23,14 +23,16 @@ class Measurement {
         this.findByName(measureObj.name) || new Measurement(measureObj)
     }
     static handleSourceList(e) {
+        let measureArray = Measurement.all
+        for( const element of measureArray) {
         const listLine = document.createElement('h3')
         const sourceLink = document.createElement('a')
-        listLine.id = `${this.name}-header`
-        sourceLink.href = this.source
-        sourceLink.id =`${this.name}-power-source`
-        sourceLink.innerHTML = `Website Link for ${this.name}`
+        listLine.id = `${element.name}-header`
+        sourceLink.href = element.source
+        sourceLink.id =`${element.name}-power-source`
+        sourceLink.innerHTML = `Website Link for ${element.name}`
         listLine.appendChild(sourceLink)
         mainDisplay.appendChild(listLine)
-    }
+    }}
     //Need to display this sourceList
 }
