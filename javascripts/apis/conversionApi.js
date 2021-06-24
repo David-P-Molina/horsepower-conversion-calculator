@@ -13,5 +13,7 @@ class ConversionApi {
     static handleError(error) {
         console.log(error)
     }
-    
+    //create a fetch post call that submits a conversion to the db connected to conversionclass with function that renders the added conversion
+
+
 }

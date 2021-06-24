@@ -9,6 +9,7 @@ class Conversion {
         this.user_id = user_id;
         this.username = username;
         Conversion.all.push(this);
+        //renders any fetches pulled from db
     }
 
     static getAll() {
@@ -30,5 +31,6 @@ class Conversion {
         //will display and render this.(conversion) on the page.
         //append to mainDisplay div to display current conversion
     }
-    
+        //checks to see if a current user is available if so show form as well as any conversions belonging to that user
+        //create a form that appears after user has been submitted
 }

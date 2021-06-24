@@ -23,4 +23,5 @@ class UserApi {
             //show form for conversion creation
         })
     }
+    //create function that either welcomes a specific user or a generic welcome
 }

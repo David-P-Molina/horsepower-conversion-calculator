@@ -25,4 +25,5 @@ class User {
         <input type="submit" value="submit">
         </form>`
     }
+    //create a username display and a way to add a new username
 }
