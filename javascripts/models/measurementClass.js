@@ -1,6 +1,5 @@
 class Measurement {
     static all = [];
-    static sourceList = [];
 
     constructor({id, name, animal_power_to_hp, hp_equivalent, source, standard}) {
         this.id = id;
@@ -37,5 +36,4 @@ class Measurement {
                 mainDisplay.appendChild(listLine)
             }
     }}
-    //Need to display this sourceList
 }
