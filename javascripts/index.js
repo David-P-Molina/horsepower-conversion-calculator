@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
     getFetchCalls();
     loadSubmissionForms();
+    handleHomeBtn();
     resetBtn.addEventListener('click', resetHpNumber)
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)

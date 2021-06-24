@@ -33,8 +33,11 @@ class Conversion {
         <form action="${Conversion.url}" method="POST">
             <label for="username">UserName</label>
             <label for="conversion name">Conversion Name:</label>
+            <input type="text" name="name" id="conversion-name"><br>
             <label for="horse-power-value">HP Amount:</label>
+            <input type="number" name="hp" id="horse-power" min="1">
             <label for="animal-power-value">Alternate Animal Power</label>
+            <label for="submit"><input type="submit" value="submit"></label>
         </form>
     </fieldset>`
     newConversionForm.innerHTML = conversionForm
