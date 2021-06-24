@@ -13,6 +13,26 @@ class ConversionApi {
     static handleError(error) {
         console.log(error)
     }
+    static submitConversionData(e) {
+        const conversionData = {
+            name: ,
+            username: ,
+            hp_quantity: ,
+            animal_conversion_quantity:
+        }
+        fetch(ConversionApi.url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(conversionData)
+          })
+          .then(response => response.json())
+        .then(json => {
+
+        })
+    }
     //create a fetch post call that submits a conversion to the db connected to conversionclass with function that renders the added conversion
 
 
