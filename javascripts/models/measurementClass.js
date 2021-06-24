@@ -23,6 +23,7 @@ class Measurement {
     }
     static handleSourceList(e) {
         if (sourceLinkList.length < 8) {
+            mainDisplay.innerHTML = ""
             let measureArray = Measurement.all
             for( const element of measureArray) {
                 const listLine = document.createElement('h3')
