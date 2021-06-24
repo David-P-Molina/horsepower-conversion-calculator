@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     homeBtn.addEventListener('click', handleHomeBtn)
     // exampleConversions.addEventListener('click', handleExampleConversions)
     userCreatedConversions.addEventListener('click', User.handleUserFormShow)
-    usernameSubmit().addEventListener('submit', UserApi.submitUsername)
     sources.addEventListener('click', Measurement.handleSourceList)
+    //usernameSubmit().addEventListener('submit', UserApi.submitUsername)
 })
 //Fetch Calls
 const getFetchCalls = () => {
