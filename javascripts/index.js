@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     startHpCounter();
     getFetchCalls();
+    loadSubmissionForms();
     resetBtn.addEventListener('click', resetHpNumber)
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
     // exampleConversions.addEventListener('click', handleExampleConversions)
     sources.addEventListener('click', Measurement.handleSourceList)
-    userCreatedConversions.addEventListener('click', loadSubmissionForms)
     //usernameSubmit().addEventListener('submit', UserApi.submitUsername)
 })
 //Fetch Calls

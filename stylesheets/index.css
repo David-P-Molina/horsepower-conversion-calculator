@@ -9,7 +9,7 @@ body {
 
 .menulist {
     margin-left: 20%;
-    margin-right: 3rem;
+    margin-right: 15%;
     padding: 0rem;
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,15 @@ body {
     margin-left: 20%;
 }
 #forms {
-    margin-left: 20%;
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(200, 179, 179);
+    overflow-x: hidden;
+    padding-top: 15%;
 }
 #titles {
     margin-left: 20%;
@@ -35,7 +43,7 @@ body {
     left: 0;
     background-color: rgb(200, 179, 179);
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 0;
 }
 #sidebar-comparison{
     margin-left: 2%;
