@@ -35,8 +35,12 @@ class Conversion {
             <label for="conversion name">Conversion Name:</label>
             <input type="text" name="name" id="conversion-name"><br>
             <label for="horse-power-value">HP Amount:</label>
-            <input type="number" name="hp" id="horse-power" min="1">
+            <input type="number" name="hp" id="horse-power" min="1" max="1000000000000">
             <label for="animal-power-value">Alternate Animal Power</label>
+            <label for="cars">Choose a car:</label>
+            <select name="measurements" id="measurements">
+            <option value=""></option>
+            </select>
             <label for="submit"><input type="submit" value="submit"></label>
         </form>
     </fieldset>`
