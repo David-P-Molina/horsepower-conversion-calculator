@@ -3,12 +3,12 @@
 }
 
 body {
-    margin: 0;
+    margin: 4%;
     padding: 0;
 }
 
 .menulist {
-    margin-left: 10rem;
+    margin-left: 20%;
     margin-right: 3rem;
     padding: 0rem;
     display: flex;
@@ -17,7 +17,28 @@ body {
     background-color: gray;
     color: white;
 }
+#main-display {
+    margin-left: 20%;
+}
+#titles {
+    margin-left: 20%;
+}
+#sidebar{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(200, 179, 179);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+#sidebar-comparison{
+    position: fixed;
+    margin-left: 2%;
 
+}
 .conversion-items ul {
     margin: 0;
     padding: 0;
@@ -57,3 +78,4 @@ tr:nth-child(odd) {
   tr:nth-child(even) {
     background-color: rgb(187, 224, 224);
   }
+
