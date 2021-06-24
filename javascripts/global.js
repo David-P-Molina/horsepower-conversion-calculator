@@ -3,6 +3,7 @@ const mainConversions = document.getElementById('conversion-data')
 const baseUrl = "http://localhost:3000/"
 const homeBtn = document.getElementById('home-btn')
 const exampleConversions = document.getElementById('example-conversions')
+const submittedConversions = document.getElementById('submitted-conversions')
 const userCreatedConversions = document.getElementById('create-ur-own-conversions')
 const sources = document.getElementById('sources')
 const sidebar = document.getElementById('sidebar-comparison')
