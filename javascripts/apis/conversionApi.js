@@ -15,10 +15,10 @@ class ConversionApi {
     }
     static submitConversionData(e) {
         const conversionData = {
-            name: ,
-            username: ,
-            hp_quantity: ,
-            animal_conversion_quantity:
+            name: conversionNameEntry.value,
+            username: usernameEntry.value,
+            hp_quantity: horsePowerEntry.value,
+            animal_conversion_quantity: animalConversionEntry.value
         }
         fetch(ConversionApi.url, {
             method: "POST",
@@ -30,10 +30,10 @@ class ConversionApi {
           })
           .then(response => response.json())
         .then(json => {
-
+            // with function that renders the added conversion
+            
         })
     }
-    //create a fetch post call that submits a conversion to the db connected to conversionclass with function that renders the added conversion
 
 
 }
