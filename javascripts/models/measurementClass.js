@@ -32,6 +32,7 @@ class Measurement {
                 sourceLink.href = element.source
                 sourceLink.id =`${element.name}-power-source`
                 sourceLink.className = "source-link-list"
+                sourceLink.target = "_blank"
                 sourceLink.innerHTML = `Website Link for ${element.name}`
                 listLine.appendChild(sourceLink)
                 mainDisplay.appendChild(listLine)

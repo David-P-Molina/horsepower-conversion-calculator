@@ -1,15 +1,16 @@
 class UserApi {
-    static url = `${baseUrl}/users`
+    static url = `${baseUrl}users`
 
-    static fetchUsers() {
-        fetch(this.url)
-        .then(response => response.json())
-        .then(json => {debugger})//new user and provide json
-        .catch(handleError)
-        }
+    // static fetchUsers() {
+    //     fetch(this.url)
+    //     .then(response => response.json())
+    //     .then(json => {debugger})//new user and provide json
+    //     .catch(handleError)
+    //     }
     static submitUsername(e) {
+        e.preventDefault()
         const userData = {
-            username: usernameEntry.value
+            username: e.target.children[1].value
         }
         fetch(UserApi.url, {
             method: 'POST',
@@ -20,8 +21,13 @@ class UserApi {
         })
         .then(response => response.json())
         .then(json => {
-            let currentUser = User.findOrCreateBy(json)
-
+            debugger
+            let currentUser = User.findOrCreateBy(json.data.attributes)
+            currentUser.displayUsername();//userclass static
+            json.data.attributes.conversions.forEach(convert => {
+                const c = Conversion.findOrCreateBy(convert);
+                c.displayUserConversion(); //conversionclass static
+            })
             //remove the form from the page and replace with welcome 
             //user and add name to conversion params
             //show form for conversion creation

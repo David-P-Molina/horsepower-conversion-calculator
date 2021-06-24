@@ -11,11 +11,11 @@ class User {
     }
 
     static findByUsername(username) {
-        this.all.find(user => user.username=== username) 
+        return this.all.find(user => user.username=== username) 
 
     }
     static findOrCreateBy(userObj) {
-        this.findByName(userObj.username) || new User(userObj)
+        return this.findByUsername(userObj.username) || new User(userObj)
     }
     static handleUserFormShow() {
         const userForm =
@@ -26,6 +26,7 @@ class User {
         </form>
         `
         userFormDiv.innerHTML = userForm
+        document.getElementById('user-submit-form').addEventListener('submit', UserApi.submitUsername)
     }
     getUserConversions() {
         return Conversion.all.filter(convert => this.id === convert.user_id)

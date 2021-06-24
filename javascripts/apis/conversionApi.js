@@ -14,9 +14,10 @@ class ConversionApi {
         console.log(error)
     }
     static submitConversionData(e) {
+        const userId = User.findByUsername(usernameEntry.value).id
         const conversionData = {
             name: conversionNameEntry.value,
-            username: usernameEntry.value,
+            user_id: userId,
             hp_quantity: horsePowerEntry.value,
             animal_conversion_quantity: animalConversionEntry.value
         }
@@ -31,7 +32,7 @@ class ConversionApi {
           .then(response => response.json())
         .then(json => {
             // with function that renders the added conversion
-            
+            debugger
         })
     }
 
