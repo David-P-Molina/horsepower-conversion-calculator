@@ -8,18 +8,22 @@ class UserApi {
         .catch(handleError)
         }
     static submitUsername(e) {
-        const userData = {}
+        const userData = {
+            username: usernameEntry.value
+        }
         fetch(UserApi.url, {
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json'
             },
-            body: JSON.stringify(Need to define user info here)
+            body: JSON.stringify(userData)
         })
         .then(response => response.json())
         .then(json => {
-            //create a new user
-            //remove the form from the page
+            let currentUser = User.findOrCreateBy(json)
+
+            //remove the form from the page and replace with welcome 
+            //user and add name to conversion params
             //show form for conversion creation
         })
     }

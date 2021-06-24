@@ -22,7 +22,7 @@ class Measurement {
         this.findByName(measureObj.name) || new Measurement(measureObj)
     }
     static handleSourceList(e) {
-        if (sourceLinkList.length < 8) {
+        if (sourceLinkList.length != this.all) {
             mainDisplay.innerHTML = ""
             let measureArray = Measurement.all
             for( const element of measureArray) {
