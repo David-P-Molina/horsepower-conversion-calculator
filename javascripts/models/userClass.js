@@ -25,5 +25,8 @@ class User {
         <input type="submit" value="submit">
         </form>`
     }
+    getUserConversions() {
+        return Conversion.all.filter(convert => this.id === convert.user_id
+    }
     //create a username display and a way to add a new username
 }
