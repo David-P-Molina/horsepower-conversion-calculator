@@ -14,7 +14,10 @@ class Conversion {
     static submitConversion(e) {
         e.preventDefault()
         const conversionData = {
-            //data
+            user_id: e.target.children,
+            name: ,
+            hp_quantity: ,
+            animal_conversion_quantity: ,
         }
         fetch(ConversionApi.url, {
             method: 'POST',
@@ -24,7 +27,8 @@ class Conversion {
             body: JSON.stringify(conversionData)
         })
         .then(response => response.json())
-        .then(json => {debugger
+        .then(json => {
+            let currentConversion = Conversion.findOrCreateBy(json.data)
         })
     }
     static getAll() {
@@ -35,12 +39,12 @@ class Conversion {
     }
 
     static findOrCreateBy(conversionObj) {
-        this.findByName(conversionObj.name) || new Conversion(conversionObj)
+        this.findById(conversionObj.id) || new Conversion(conversionObj)
     }
     static handleConversionForm() {
     const conversionForm =
     `<h3>New Conversion</h3>
-        <form action="${Conversion.url}" method="POST">
+        <form id="conversion-submit-form">
             <label for="conversion name">Conversion Name:</label>
             <input type="text" name="name" id="conversion-name" class="conversion-inputs" disabled><br>
             <label for="horse-power-value">HP Amount:</label>
@@ -59,18 +63,17 @@ class Conversion {
             <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit" disabled></label>
         </form>`
     newConversionForm.innerHTML = conversionForm
+    document.getElementById('conversion-submit-form').addEventListener('submit', ConversionApi.submitConversionData)
     }
 
     static enableConversionForm() {
         for (let i = 0; i < conversionInputs.length; i++) {
-            // Runs 5 times, with values of step 0 through 4.
             conversionInputs[i].removeAttribute('disabled')
           }
     }
     static disableConversionForm() {
         for (let i = 0; i < conversionInputs.length; i++) {
-            // Runs 5 times, with values of step 0 through 4.
-            conversionInputs[i].setAttribute('disabled','disabled')
+           conversionInputs[i].setAttribute('disabled','disabled')
           }
     }
 

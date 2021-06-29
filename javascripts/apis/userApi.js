@@ -21,6 +21,7 @@ class UserApi {
             json.data.attributes.conversions.forEach(convert => {
                 Conversion.displayUserConversion(convert);
             })
+
         })
     }
 }
