@@ -11,7 +11,22 @@ class Conversion {
         Conversion.all.push(this);
         //renders any fetches pulled from db
     }
-
+    static submitConversion(e) {
+        e.preventDefault()
+        const conversionData = {
+            //data
+        }
+        fetch(ConversionApi.url, {
+            method: 'POST',
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body: JSON.stringify(conversionData)
+        })
+        .then(response => response.json())
+        .then(json => {debugger
+        })
+    }
     static getAll() {
         return this.all
     }
