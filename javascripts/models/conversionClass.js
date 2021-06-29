@@ -46,6 +46,9 @@ class Conversion {
     </fieldset>`
     newConversionForm.innerHTML = conversionForm
     }
+    static displayUserConversion() {
+        userMadeConversionList.innerHTML = ``
+    }
     render() {
         //will display and render this.(conversion) on the page.
         //append to mainDisplay div to display current conversion
