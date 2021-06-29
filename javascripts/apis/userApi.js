@@ -21,12 +21,12 @@ class UserApi {
         })
         .then(response => response.json())
         .then(json => {
-            debugger
             let currentUser = User.findOrCreateBy(json.data.attributes)
-            currentUser.displayUsername();//userclass static
+            currentUser.displayUsername();
             json.data.attributes.conversions.forEach(convert => {
                 const c = Conversion.findOrCreateBy(convert);
-                c.displayUserConversion(); //conversionclass static
+                c.welcomeUser(); //user class static
+                c.displayUserConversion(); //conversion class static
             })
             //remove the form from the page and replace with welcome 
             //user and add name to conversion params
