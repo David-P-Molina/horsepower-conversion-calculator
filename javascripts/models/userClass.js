@@ -20,7 +20,7 @@ class User {
         const userForm =
         `<form id="user-submit-form">
             <label for="username">UserName</label>
-            <input type="text" id="username"></input>
+            <input type="text" id="username" minlength="4" maxlength="15"></input>
             <label for="submit"><input type="submit" value="submit"></label>
         </form>`
         userFormDiv.innerHTML = userForm

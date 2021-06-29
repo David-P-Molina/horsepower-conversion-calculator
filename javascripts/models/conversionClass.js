@@ -28,9 +28,9 @@ class Conversion {
     }
     static handleConversionForm() {
     const conversionForm =
-    `<fieldset disabled="disabled">
-        <h1>New Conversion</h1>
-        <form action="${Conversion.url}" method="POST">
+    `<fieldset>
+        <h3>New Conversion</h3>
+        <form disabled action="${Conversion.url}" method="POST">
             <label for="username">UserName</label>
             <label for="conversion name">Conversion Name:</label>
             <input type="text" name="name" id="conversion-name"><br>
