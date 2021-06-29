@@ -16,13 +16,13 @@ class ConversionApi {
     static submitConversionData(e) {
         e.preventDefault();
         let submission = e.target.children
-        let animalPower = Measurement.findByName(submission[6].value)
+        let animalPower = Measurement.findByName((submission[6].value +"-Power" ))
         let conversionQuantity = parseInt(submission[4].value) * parseInt(animalPower.hp_equivalent)
         const userId = User.findByUsername(submission[7].value).id
         const conversionData = {
             name: submission[1].value,
             user_id: userId,
-            animal_type: ,
+            animal_type: submission[6].value,
             hp_quantity: submission[4].value,
             animal_conversion_quantity: conversionQuantity
         }
