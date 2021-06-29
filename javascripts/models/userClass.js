@@ -38,6 +38,7 @@ class User {
     }
     static handleResetUserBtn() {
         User.handleUserFormShow();
+        Conversion.disableConversionForm();
         userMadeConversionList.innerHTML = ""
     }
     getUserConversions() {

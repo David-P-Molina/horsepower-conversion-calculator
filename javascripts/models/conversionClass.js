@@ -28,24 +28,28 @@ class Conversion {
     }
     static handleConversionForm() {
     const conversionForm =
-    `<fieldset>
-        <h3>New Conversion</h3>
-        <form disabled action="${Conversion.url}" method="POST">
+    `<h3>New Conversion</h3>
+        <form action="${Conversion.url}" method="POST">
             <label for="username">UserName</label>
             <label for="conversion name">Conversion Name:</label>
-            <input type="text" name="name" id="conversion-name"><br>
+            <input type="text" name="name" id="conversion-name" class="conversion-inputs"><br>
             <label for="horse-power-value">HP Amount:</label>
-            <input type="number" name="hp" id="horse-power-entry" min="1" max="1000000000000">
-            <label for="animal-power-value">Alternate Animal Power</label>
-            <label for="cars">Choose a car:</label>
-            <select name="measurements" id="measurements">
+            <input type="number" name="hp" id="horse-power-entry" class="conversion-inputs" min="1" max="1000000000000">
+            <label for="animal-power-value">Choose An Alternate Animal Power</label>
+            <select name="measurements" id="measurements" class="conversion-inputs">
             <option value=""></option>
             </select>
-            <label for="submit"><input type="submit" value="submit"></label>
-        </form>
-    </fieldset>`
+            <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit"></label>
+        </form>`
     newConversionForm.innerHTML = conversionForm
     }
+
+    static enableConversionForm() {
+        
+    }
+    static disableConversionForm() {
+    }
+
     static displayUserConversion(conversion) {
         const conversionRow = `
         <p><b>${conversion.name}</b> - HP: ${conversion.hp_quantity} / ${conversion.animal_conversion_quantity}</p>`
