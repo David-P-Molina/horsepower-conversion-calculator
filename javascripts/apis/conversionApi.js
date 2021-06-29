@@ -22,6 +22,7 @@ class ConversionApi {
         const conversionData = {
             name: submission[1].value,
             user_id: userId,
+            animal_type: ,
             hp_quantity: submission[4].value,
             animal_conversion_quantity: conversionQuantity
         }
