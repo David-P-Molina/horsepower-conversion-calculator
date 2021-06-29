@@ -14,12 +14,16 @@ class ConversionApi {
         console.log(error)
     }
     static submitConversionData(e) {
+        e.preventDefault();
+        let submission = e.target.children
+        let animalPower = Measurement.findByName(submission[6].value)
+        let conversionQuantity = parseInt(submission[4].value) * parseInt(animalPower.hp_equivalent)
         const userId = User.findByUsername(usernameEntry.value).id
         const conversionData = {
-            name: conversionNameEntry.value,
+            name: submission[1].value,
             user_id: userId,
-            hp_quantity: horsePowerEntry.value,
-            animal_conversion_quantity: animalConversionEntry.value
+            hp_quantity: submission[4].value,
+            animal_conversion_quantity: conversionQuantity
         }
         fetch(ConversionApi.url, {
             method: "POST",

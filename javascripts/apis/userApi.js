@@ -2,7 +2,7 @@ class UserApi {
     static url = `${baseUrl}users`
 
     static submitUsername(e) {
-        e.preventDefault()
+        e.preventDefault();
         const userData = {
             username: e.target.children[1].value
         }

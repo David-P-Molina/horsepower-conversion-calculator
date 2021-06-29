@@ -11,26 +11,7 @@ class Conversion {
         Conversion.all.push(this);
         //renders any fetches pulled from db
     }
-    static submitConversion(e) {
-        e.preventDefault()
-        const conversionData = {
-            user_id: e.target.children,
-            name: ,
-            hp_quantity: ,
-            animal_conversion_quantity: ,
-        }
-        fetch(ConversionApi.url, {
-            method: 'POST',
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            body: JSON.stringify(conversionData)
-        })
-        .then(response => response.json())
-        .then(json => {
-            let currentConversion = Conversion.findOrCreateBy(json.data)
-        })
-    }
+
     static getAll() {
         return this.all
     }
