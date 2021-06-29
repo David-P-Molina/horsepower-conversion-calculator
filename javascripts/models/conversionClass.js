@@ -46,8 +46,10 @@ class Conversion {
     </fieldset>`
     newConversionForm.innerHTML = conversionForm
     }
-    static displayUserConversion() {
-        userMadeConversionList.innerHTML = ``
+    static displayUserConversion(conversion) {debugger
+        const conversionRow = `
+        <li>${conversion.name} - HP: ${conversion.hp_quantity} / ${conversion.animal_conversion_quantity}</li>`
+        userMadeConversionList.innerHTML += conversionRow
     }
     render() {
         //will display and render this.(conversion) on the page.

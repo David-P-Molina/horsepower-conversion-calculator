@@ -24,8 +24,7 @@ class UserApi {
             let currentUser = User.findOrCreateBy(json.data.attributes)
             User.displayUsername(currentUser.username);
             json.data.attributes.conversions.forEach(convert => {
-                const c = Conversion.findOrCreateBy(convert);
-                c.displayUserConversion(); //conversion class static
+                Conversion.displayUserConversion(convert); //conversion class static
             })
             //remove the form from the page and replace with welcome 
             //user and add name to conversion params
