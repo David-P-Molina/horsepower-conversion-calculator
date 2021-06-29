@@ -13,6 +13,7 @@ const horsePowerEntry = document.getElementById('horse-power-value')
 const animalConversionEntry = document.getElementById('animal-power-value')
 const userCreatedConversions = document.getElementById('new-conversions')
 const userMadeConversionList = document.getElementById('user-made-conversions')
+
 const sources = document.getElementById('sources')
 const sidebar = document.getElementById('sidebar-comparison')
 const table = document.getElementsByTagName('table')

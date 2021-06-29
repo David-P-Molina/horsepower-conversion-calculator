@@ -29,11 +29,16 @@ class User {
     static displayUsername(username){
         const welcomeGreeting = 
         `<h3> Welcome ${username}!</h3>
-        
+        <button id="reset-user-btn">New/Change User</button>
         `
-        
         userFormDiv.innerHTML = welcomeGreeting
-        //create a username display and a way to add a new username
+
+        const resetUserBtn = document.getElementById('reset-user-btn')
+        resetUserBtn.addEventListener('click', User.handleResetUserBtn)
+    }
+    static handleResetUserBtn() {
+        User.handleUserFormShow();
+        userMadeConversionList.innerHTML = ""
     }
     getUserConversions() {
         return Conversion.all.filter(convert => this.id === convert.user_id)
