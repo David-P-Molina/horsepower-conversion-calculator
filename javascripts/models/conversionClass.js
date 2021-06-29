@@ -33,13 +33,13 @@ class Conversion {
             <label for="animal-power-value">Choose An Alternate Animal Power</label>
             <select name="measurements" id="measurements" class="conversion-inputs" disabled>
             <option value="disabled">--Animal Power--</option>
-            <option value="oxpower">Ox-Power</option>
-            <option value="mulepower">Mule-Power</option>
-            <option value="squirrelpower">Squirrel-Power</option>
-            <option value="duckpower">Duck-Power</option>
-            <option value="manpower">Man-Power</option>
-            <option value="lionpower">Lion-Power</option>
-            <option value="donkeypower">Donkey-Power</option>
+            <option value="Ox-Power">Ox-Power</option>
+            <option value="Mule-Power">Mule-Power</option>
+            <option value="Squirrel-Power">Squirrel-Power</option>
+            <option value="Duck-Power">Duck-Power</option>
+            <option value="Man-Power">Man-Power</option>
+            <option value="Lion-Power">Lion-Power</option>
+            <option value="Donkey-Power">Donkey-Power</option>
             </select>
             <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit" disabled></label>
         </form>`
