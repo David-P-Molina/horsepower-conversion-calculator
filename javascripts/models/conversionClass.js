@@ -32,22 +32,29 @@ class Conversion {
         <form action="${Conversion.url}" method="POST">
             <label for="username">UserName</label>
             <label for="conversion name">Conversion Name:</label>
-            <input type="text" name="name" id="conversion-name" class="conversion-inputs"><br>
+            <input type="text" name="name" id="conversion-name" class="conversion-inputs" disabled><br>
             <label for="horse-power-value">HP Amount:</label>
-            <input type="number" name="hp" id="horse-power-entry" class="conversion-inputs" min="1" max="1000000000000">
+            <input type="number" name="hp" id="horse-power-entry" class="conversion-inputs" min="1" max="1000000000000" disabled>
             <label for="animal-power-value">Choose An Alternate Animal Power</label>
-            <select name="measurements" id="measurements" class="conversion-inputs">
+            <select name="measurements" id="measurements" class="conversion-inputs" disabled>
             <option value=""></option>
             </select>
-            <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit"></label>
+            <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit" disabled></label>
         </form>`
     newConversionForm.innerHTML = conversionForm
     }
 
     static enableConversionForm() {
-        
+        for (let i = 0; i < conversionInputs.length; i++) {
+            // Runs 5 times, with values of step 0 through 4.
+            conversionInputs[i].removeAttribute('disabled')
+          }
     }
     static disableConversionForm() {
+        for (let i = 0; i < conversionInputs.length; i++) {
+            // Runs 5 times, with values of step 0 through 4.
+            conversionInputs[i].setAttribute('disabled','disabled')
+          }
     }
 
     static displayUserConversion(conversion) {

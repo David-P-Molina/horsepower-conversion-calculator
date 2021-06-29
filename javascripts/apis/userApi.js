@@ -23,8 +23,8 @@ class UserApi {
         .then(json => {
             let currentUser = User.findOrCreateBy(json.data.attributes)
             User.displayUsername(currentUser.username);
+            Conversion.enableConversionForm();
             json.data.attributes.conversions.forEach(convert => {
-                Conversion.enableConversionForm();
                 Conversion.displayUserConversion(convert); //conversion class static
             })
             //remove the form from the page and replace with welcome 
