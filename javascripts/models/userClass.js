@@ -13,6 +13,9 @@ class User {
     static findByUsername(username) {
         return this.all.find(user => user.username=== username) 
     }
+    static findById(id) {
+        return this.all.find(user => user.id=== id) 
+    }
     static findOrCreateBy(userObj) {
         return this.findByUsername(userObj.username) || new User(userObj)
     }
@@ -32,7 +35,7 @@ class User {
         <button id="reset-user-btn">New/Change User</button>
         `
         userFormDiv.innerHTML = welcomeGreeting
-
+        document.getElementById('hidden-username-input').setAttribute("value", `${username}`)
         const resetUserBtn = document.getElementById('reset-user-btn')
         resetUserBtn.addEventListener('click', User.handleResetUserBtn)
     }

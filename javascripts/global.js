@@ -17,6 +17,7 @@ const submitConversion = document.getElementById('conversion-submit-btn')
 const fieldsetConversion = document.getElementsByTagName('fieldset')
 const conversionInputs = document.getElementsByClassName('conversion-inputs')
 
+
 const sources = document.getElementById('sources')
 const sidebar = document.getElementById('sidebar-comparison')
 const table = document.getElementsByTagName('table')

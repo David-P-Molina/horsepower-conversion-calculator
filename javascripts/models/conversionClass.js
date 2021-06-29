@@ -16,7 +16,10 @@ class Conversion {
         return this.all
     }
     static findById(id) {
-        this.all.find(conversion => conversion.id === id) 
+        return this.all.find(conversion => conversion.id === id) 
+    }
+    static findByName(name) {
+        return this.all.find(conversion => conversion.name === name) 
     }
 
     static findOrCreateBy(conversionObj) {
@@ -41,6 +44,7 @@ class Conversion {
             <option value="Lion-Power">Lion-Power</option>
             <option value="Donkey-Power">Donkey-Power</option>
             </select>
+            <input type="hidden" id="hidden-username-input"></input>
             <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit" disabled></label>
         </form>`
     newConversionForm.innerHTML = conversionForm

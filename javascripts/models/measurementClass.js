@@ -15,7 +15,7 @@ class Measurement {
     }
 
     static findByName(name) {
-        this.all.find(measurement => measurement.name === name) 
+        return this.all.find(measurement => measurement.name === name) 
 
     }
     static findOrCreateBy(measureObj) {
