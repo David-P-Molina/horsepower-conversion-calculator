@@ -26,7 +26,13 @@ class User {
         userFormDiv.innerHTML = userForm
         document.getElementById('user-submit-form').addEventListener('submit', UserApi.submitUsername)
     }
-    static displayUsername(){
+    static displayUsername(username){
+        const welcomeGreeting = 
+        `<h3> Welcome ${username}!</h3>
+        
+        `
+        
+        userFormDiv.innerHTML = welcomeGreeting
         //create a username display and a way to add a new username
     }
     getUserConversions() {
