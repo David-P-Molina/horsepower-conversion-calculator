@@ -6,6 +6,7 @@ class ConversionApi {
         .then(json => json.data.forEach(obj => {
             let object = obj.attributes
             Conversion.findOrCreateBy(object)
+            //renderAll()
         }))
         // .catch(handleError)
     }
@@ -17,8 +18,8 @@ class ConversionApi {
         e.preventDefault();
         let submission = e.target.children
         let animalPower = Measurement.findByName((submission[6].value +"-Power" ))
-        let conversionQuantity = parseInt(submission[4].value) * parseInt(animalPower.hp_equivalent)
-        const userId = User.findByUsername(submission[7].value).id
+        let conversionQuantity = (parseFloat(submission[4].value) * parseFloat(animalPower.hp_equivalent)).toFixed(2)
+        let userId = User.findByUsername(submission[7].value).id
         const conversionData = {
             name: submission[1].value,
             user_id: userId,
@@ -35,11 +36,10 @@ class ConversionApi {
             body: JSON.stringify(conversionData)
           })
           .then(response => response.json())
-        .then(json => {
+        .then(json => { 
+            Conversion.displayUserConversion(json);
             // with function that renders the added conversion
-            debugger
+            //{id: 15, name: "Brooklyn Nets", hp_quantity: 9, animal_conversion_quantity: 2700, animal_type: "Duck", …}
         })
     }
-
-
 }

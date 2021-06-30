@@ -10,11 +10,7 @@ const usernameEntry = document.getElementById('username')
 const newConversionForm = document.getElementById('new-conversion')
 const userCreatedConversions = document.getElementById('new-conversions')
 const userMadeConversionList = document.getElementById('user-made-conversions')
-const conversionNameEntry = document.getElementById('conversion-name')
-const horsePowerEntry = document.getElementById('horse-power-entry')
-const measurements = document.getElementById('measurements')
 const submitConversion = document.getElementById('conversion-submit-btn')
-const fieldsetConversion = document.getElementsByTagName('fieldset')
 const conversionInputs = document.getElementsByClassName('conversion-inputs')
 
 

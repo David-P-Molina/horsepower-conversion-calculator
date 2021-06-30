@@ -13,9 +13,6 @@ class Conversion {
         //renders any fetches pulled from db
     }
 
-    static getAll() {
-        return this.all
-    }
     static findById(id) {
         return this.all.find(conversion => conversion.id === id) 
     }
@@ -65,9 +62,10 @@ class Conversion {
 
     static displayUserConversion(conversion) {
         const conversionRow = `
-        <p><b>${conversion.name}</b> - HP: ${conversion.hp_quantity} / ${conversion.animal_conversion_quantity}</p>`
+        <p><b>${conversion.name}</b> - <br><em>Horse-Power:</e,> ${conversion.hp_quantity} <br><em>${conversion.animal_type}-Power:</em>${conversion.animal_conversion_quantity}</p>`
         userMadeConversionList.innerHTML += conversionRow
     }
+
     renderAll() {
         //will display and render this.(conversion) on the page.
         //append to mainDisplay div to display current conversion
