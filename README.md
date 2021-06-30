@@ -17,9 +17,28 @@ cd strange-conversion-calculator
 git clone https://github.com/David-P-Molina/strange-conversion-calculator-backend
 ```
 ## Starting The Application
-### Visit Page
+### Install dependencies
+#### Backend
+And then execute :
 
+    $ bundle install
+### Initialize the database
 
+```shell
+rails db:create
+rails db:migrate
+rails db:seed
+```
+### Starting The API
+type:
+```shell
+rails server 
+```
+#### Frontend
+In terminal execute:
+```shell
+ $ open index.html
+```
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/David-P-Molina/strange-conversion-calculator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/David-P-Molina/strange-conversion-calculator/CODE_OF_CONDUCT.md).
