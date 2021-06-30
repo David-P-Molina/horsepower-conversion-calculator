@@ -78,7 +78,6 @@ class Conversion {
         allConversionsList.appendChild(div)
     }
     static renderAll() {
-
         const conversions = Conversion.all
         for (const element of conversions) {
             element.render()

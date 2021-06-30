@@ -32,6 +32,9 @@ body {
     overflow-x: hidden;
     padding-top: 2%;
 }
+#form-content {
+    margin: 3%;
+}
 #new-user {
     margin: 2%
 }
