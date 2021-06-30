@@ -10,7 +10,6 @@ class Conversion {
         this.user_id = user_id;
         this.username = username;
         Conversion.all.push(this);
-        //renders any fetches pulled from db
     }
 
     static findById(id) {
@@ -30,7 +29,7 @@ class Conversion {
             <label for="conversion name">Conversion Name:</label><br>
             <input type="text" name="name" id="conversion-name" class="conversion-inputs" disabled><br>
             <label for="horse-power-value">HP Amount:</label><br>
-            <input type="number" name="hp" id="horse-power-entry" class="conversion-inputs" min="1" max="1000000000000" disabled>
+            <input type="number" name="hp" id="horse-power-entry" class="conversion-inputs" min="1" max="1000000000000" disabled> <br>
             <label for="animal-power-value">Choose An Alternate Animal Power</label>
             <select name="measurements" id="measurements" class="conversion-inputs" disabled>
             <option value="disabled">--Animal Power--</option>
@@ -82,8 +81,6 @@ class Conversion {
         for (const element of conversions) {
             element.render()
         }
-        //will display and render this.(conversion) on the page.
-        //append to mainDisplay div to display current conversion
     }
 
 }
