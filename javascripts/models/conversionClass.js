@@ -65,8 +65,12 @@ class Conversion {
         <p><b>${conversion.name}</b> - <br><em>Horse-Power:</e,> ${conversion.hp_quantity} <br><em>${conversion.animal_type}-Power:</em>${conversion.animal_conversion_quantity}</p>`
         userMadeConversionList.innerHTML += conversionRow
     }
-
+    
     renderAll() {
+        const conversions = Conversion.all
+        for (const element of conversions) {
+            element.render()
+        }
         //will display and render this.(conversion) on the page.
         //append to mainDisplay div to display current conversion
     }
