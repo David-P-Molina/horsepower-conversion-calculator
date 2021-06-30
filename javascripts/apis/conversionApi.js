@@ -8,7 +8,6 @@ class ConversionApi {
             Conversion.findOrCreateBy(object)
         }))
     }
-    
     static submitConversionData(e) {
         e.preventDefault();
         let submission = e.target.children

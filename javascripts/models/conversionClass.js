@@ -11,14 +11,12 @@ class Conversion {
         this.username = username;
         Conversion.all.push(this);
     }
-
     static findById(id) {
         return this.all.find(conversion => conversion.id === id) 
     }
     static findByName(name) {
         return this.all.find(conversion => conversion.name === name) 
     }
-
     static findOrCreateBy(conversionObj) {
         this.findById(conversionObj.id) || new Conversion(conversionObj)
     }
@@ -44,8 +42,8 @@ class Conversion {
             <input type="hidden" id="hidden-username-input"></input><br>
             <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit" disabled></label>
         </form>`
-    newConversionForm.innerHTML = conversionForm
-    document.getElementById('conversion-submit-form').addEventListener('submit', ConversionApi.submitConversionData)
+        newConversionForm.innerHTML = conversionForm
+        document.getElementById('conversion-submit-form').addEventListener('submit', ConversionApi.submitConversionData)
     }
     static enableConversionForm() {
         for (let i = 0; i < conversionInputs.length; i++) {
@@ -57,6 +55,12 @@ class Conversion {
         const conversionRow = `
         <p><b>${conversion.name}</b> - <br><em>Horse-Power:</e,> ${conversion.hp_quantity} <br><em>${conversion.animal_type}-Power:</em>${conversion.animal_conversion_quantity}</p>`
         userMadeConversionList.innerHTML += conversionRow
+    }
+    static renderAll() {
+        const conversions = Conversion.all
+        for (const element of conversions) {
+            element.render()
+        }
     }
     render() {
         const div = document.createElement('div')
@@ -70,11 +74,4 @@ class Conversion {
         div.appendChild(line)
         allConversionsList.appendChild(div)
     }
-    static renderAll() {
-        const conversions = Conversion.all
-        for (const element of conversions) {
-            element.render()
-        }
-    }
-
 }

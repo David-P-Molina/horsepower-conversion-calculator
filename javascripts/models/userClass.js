@@ -6,10 +6,6 @@ class User {
         this.username = username;
         User.all.push(this);
     }
-    static getAll() {
-        return this.all
-    }
-
     static findByUsername(username) {
         return this.all.find(user => user.username=== username) 
     }

@@ -1,7 +1,6 @@
 
 class MeasurementApi {
     static url = `${baseUrl}/measurements`
-    
     static fetchMeasurements() {
     fetch(this.url)
     .then(response => response.json())

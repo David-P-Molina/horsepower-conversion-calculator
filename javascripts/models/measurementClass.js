@@ -13,10 +13,8 @@ class Measurement {
     static getAll() {
         return this.all
     }
-
     static findByName(name) {
         return this.all.find(measurement => measurement.name === name) 
-
     }
     static findOrCreateBy(measureObj) {
         this.findByName(measureObj.name) || new Measurement(measureObj)
@@ -37,5 +35,6 @@ class Measurement {
                 listLine.appendChild(sourceLink)
                 mainDisplay.appendChild(listLine)
             }
-    }}
+        }
+    }
 }
