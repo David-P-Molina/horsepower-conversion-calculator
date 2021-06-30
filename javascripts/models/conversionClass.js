@@ -71,9 +71,10 @@ class Conversion {
         header.innerText = `<em>${this.name}</em> created by ${this.username}`
         line.innerHTML = `Horse-Power: ${this.hp_quantity} = ${this.animal_type}-Power: ${this.animal_conversion_quantity}` 
         header.appendChild(line)
-        
+        submittedConversions.appendChild(header)
     }
-    renderAll() {
+    static renderAll() {
+
         const conversions = Conversion.all
         for (const element of conversions) {
             element.render()

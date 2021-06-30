@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeBtn.addEventListener('click', handleHomeBtn)
     // exampleConversions.addEventListener('click', handleExampleConversions)
     sources.addEventListener('click', Measurement.handleSourceList)
-    //usernameSubmit().addEventListener('submit', UserApi.submitUsername)
+    submittedConversions.addEventListener('click', handleAllConversions)
 })
 //Fetch Calls
 const getFetchCalls = () => {
@@ -25,7 +25,9 @@ const loadSubmissionForms = () => {
     User.handleUserFormShow();
     Conversion.handleConversionForm();
 }
-
+const handleAllConversions = () => {
+    mainDisplay.innerHTML = '<div id="all-conversions-list"> </div>'
+}
 //Side-Bar Functionality
 const isIncrementing = () => {
     return (pauseBtn.innerText === "Pause") ? true : false
