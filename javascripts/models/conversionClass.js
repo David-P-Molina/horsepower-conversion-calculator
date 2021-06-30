@@ -66,12 +66,16 @@ class Conversion {
         userMadeConversionList.innerHTML += conversionRow
     }
     render() {
-        const header = document.createElement('h5')
+        const div = document.createElement('div')
+        div.className = "conversion-section-item"
+        const header = document.createElement('h3')
         const line = document.createElement("p")
-        header.innerText = `<em>${this.name}</em> created by ${this.username}`
+        const allConversionsList = document.getElementById('all-conversions-list')
+        header.innerHTML = `<em>${this.name}</em> created by ${this.username}`
         line.innerHTML = `Horse-Power: ${this.hp_quantity} = ${this.animal_type}-Power: ${this.animal_conversion_quantity}` 
-        header.appendChild(line)
-        submittedConversions.appendChild(header)
+        div.appendChild(header)
+        div.appendChild(line)
+        allConversionsList.appendChild(div)
     }
     static renderAll() {
 

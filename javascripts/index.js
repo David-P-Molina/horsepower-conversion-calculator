@@ -27,6 +27,7 @@ const loadSubmissionForms = () => {
 }
 const handleAllConversions = () => {
     mainDisplay.innerHTML = '<div id="all-conversions-list"> </div>'
+    Conversion.renderAll();
 }
 //Side-Bar Functionality
 const isIncrementing = () => {
