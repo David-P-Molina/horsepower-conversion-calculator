@@ -22,7 +22,7 @@ class User {
     static handleUserFormShow() {
         const userForm =
         `<form id="user-submit-form">
-            <label for="username">UserName</label>
+            <label for="username"><h3>UserName</h3></label>
             <input type="text" id="username" minlength="4" maxlength="15"></input>
             <label for="submit"><input type="submit" value="submit"></label>
         </form>`

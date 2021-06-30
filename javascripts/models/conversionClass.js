@@ -27,9 +27,9 @@ class Conversion {
     const conversionForm =
     `<h3>New Conversion</h3>
         <form id="conversion-submit-form">
-            <label for="conversion name">Conversion Name:</label>
+            <label for="conversion name">Conversion Name:</label><br>
             <input type="text" name="name" id="conversion-name" class="conversion-inputs" disabled><br>
-            <label for="horse-power-value">HP Amount:</label>
+            <label for="horse-power-value">HP Amount:</label><br>
             <input type="number" name="hp" id="horse-power-entry" class="conversion-inputs" min="1" max="1000000000000" disabled>
             <label for="animal-power-value">Choose An Alternate Animal Power</label>
             <select name="measurements" id="measurements" class="conversion-inputs" disabled>
@@ -42,7 +42,7 @@ class Conversion {
             <option value="Lion">Lion-Power</option>
             <option value="Donkey">Donkey-Power</option>
             </select>
-            <input type="hidden" id="hidden-username-input"></input>
+            <input type="hidden" id="hidden-username-input"></input><br>
             <label for="submit"><input id="conversion-submit-btn" class="conversion-inputs" type="submit" value="submit" disabled></label>
         </form>`
     newConversionForm.innerHTML = conversionForm
