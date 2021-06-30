@@ -47,15 +47,9 @@ class Conversion {
     newConversionForm.innerHTML = conversionForm
     document.getElementById('conversion-submit-form').addEventListener('submit', ConversionApi.submitConversionData)
     }
-
     static enableConversionForm() {
         for (let i = 0; i < conversionInputs.length; i++) {
             conversionInputs[i].removeAttribute('disabled')
-          }
-    }
-    static disableConversionForm() {
-        for (let i = 0; i < conversionInputs.length; i++) {
-           conversionInputs[i].setAttribute('disabled','disabled')
           }
     }
 
