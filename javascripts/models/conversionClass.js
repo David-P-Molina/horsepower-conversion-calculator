@@ -65,7 +65,14 @@ class Conversion {
         <p><b>${conversion.name}</b> - <br><em>Horse-Power:</e,> ${conversion.hp_quantity} <br><em>${conversion.animal_type}-Power:</em>${conversion.animal_conversion_quantity}</p>`
         userMadeConversionList.innerHTML += conversionRow
     }
-    
+    render() {
+        const header = document.createElement('h5')
+        const line = document.createElement("p")
+        header.innerText = `<em>${this.name}</em> created by ${this.username}`
+        line.innerHTML = `Horse-Power: ${this.hp_quantity} = ${this.animal_type}-Power: ${this.animal_conversion_quantity}` 
+        header.appendChild(line)
+        
+    }
     renderAll() {
         const conversions = Conversion.all
         for (const element of conversions) {
