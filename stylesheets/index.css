@@ -57,20 +57,18 @@ body {
     margin-left: 23%;
     align: center;
 }
-#sidebar{
+#sidebar {
     height: 100%;
     width: 23%;
     position: fixed;
-    
     top: 0;
     left: 0;
     background-color: #595959;
     overflow-x: hidden;
     padding-top: 0;
 }
-#sidebar-comparison{
+#sidebar-comparison {
     margin-left: 2%;
-
 }
 .conversion-items ul {
     margin: 0;
