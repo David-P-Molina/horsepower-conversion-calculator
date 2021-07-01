@@ -13,10 +13,11 @@ body {
     margin-right: 23%;
     padding: 0rem;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     background-color: #D9D9D9;
     color: #0E1F40;
+    
 }
 #main-display {
     margin-left: 23%;
@@ -64,8 +65,9 @@ body {
 }
 .conversion-items ul {
     margin: 0;
-    padding: 0;
+    padding: 1%;
     display: flex;
+    text-align: center;
 }
 
 .conversion-items li {

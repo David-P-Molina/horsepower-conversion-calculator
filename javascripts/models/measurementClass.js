@@ -33,12 +33,12 @@ class Measurement {
                 mainDisplay.appendChild(listLine)
             }
         }
-        addMeasurementBtn() {
-            const button = document.createElement("button")
-            button.value = this.hp_equivalent
-            button.innerText = this.name
-            button.className ="animal-btns"
-            animalButtons.appendChild(button)
-        }
+    }
+    addMeasurementBtn() {
+        const button = document.createElement("button")
+        button.value = this.hp_equivalent
+        button.innerText = this.name
+        button.className ="animal-btns"
+        animalButtons.appendChild(button)
     }
 }
