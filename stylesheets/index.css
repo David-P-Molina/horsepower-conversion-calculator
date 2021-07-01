@@ -23,6 +23,13 @@ body {
     margin-left: 23%;
     margin-right: 23%;
 }
+#error {
+    background-color: red;
+    font-size:x-large;
+  }
+.hide {
+    display: none;
+}
 #forms {
     height: 100%;
     width: 23%;
