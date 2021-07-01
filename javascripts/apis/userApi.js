@@ -1,5 +1,5 @@
 class UserApi {
-    static url = `${baseUrl}users`
+    static url = `${baseUrl}/users`
     static submitUsername(e) {
         e.preventDefault();
         const userData = {
