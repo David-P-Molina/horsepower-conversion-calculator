@@ -10,9 +10,6 @@ class Measurement {
         this.standard = standard;
         Measurement.all.push(this);
     }
-    static getAll() {
-        return this.all
-    }
     static findByName(name) {
         return this.all.find(measurement => measurement.name === name) 
     }
@@ -35,6 +32,13 @@ class Measurement {
                 listLine.appendChild(sourceLink)
                 mainDisplay.appendChild(listLine)
             }
+        }
+        addMeasurementBtn() {
+            const button = document.createElement("button")
+            button.value = this.hp_equivalent
+            button.innerText = this.name
+            button.className ="animal-btns"
+            animalButtons.appendChild(button)
         }
     }
 }
