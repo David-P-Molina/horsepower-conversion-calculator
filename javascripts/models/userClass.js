@@ -25,20 +25,20 @@ class User {
         userFormDiv.innerHTML = userForm
         document.getElementById('user-submit-form').addEventListener('submit', UserApi.submitUsername)
     }
-    static displayUsername(username){
-        const welcomeGreeting = 
-        `<h3> Welcome ${username}!</h3>
-        <button id="reset-user-btn">New/Change User</button>
-        `
-        userFormDiv.innerHTML = welcomeGreeting
-        document.getElementById('hidden-username-input').setAttribute("value", `${username}`)
-        const resetUserBtn = document.getElementById('reset-user-btn')
-        resetUserBtn.addEventListener('click', User.handleResetUserBtn)
-    }
     static handleResetUserBtn() {
         User.handleUserFormShow();
         Conversion.handleConversionForm();
         userMadeConversionList.innerHTML = ""
+    }
+    displayUsername(){
+        const welcomeGreeting = 
+        `<h3> Welcome ${this.username}!</h3>
+        <button id="reset-user-btn">New/Change User</button>
+        `
+        userFormDiv.innerHTML = welcomeGreeting
+        document.getElementById('hidden-username-input').setAttribute("value", `${this.username}`)
+        const resetUserBtn = document.getElementById('reset-user-btn')
+        resetUserBtn.addEventListener('click', User.handleResetUserBtn)
     }
     getUserConversions() {
         return Conversion.all.filter(convert => this.id === convert.user_id)

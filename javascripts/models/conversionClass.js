@@ -50,11 +50,10 @@ class Conversion {
             conversionInputs[i].removeAttribute('disabled')
           }
     }
-
     static displayUserConversion(conversion) {
         const conversionRow = `
         <p><b>${conversion.name}</b> - <br><em>Horse-Power:</e,> ${conversion.hp_quantity} <br><em>${conversion.animal_type}-Power:</em>${conversion.animal_conversion_quantity}</p>`
-        userMadeConversionList.innerHTML += conversionRow
+        userMadeConversionList.innerHTML += conversionRow    
     }
     static renderAll() {
         const conversions = Conversion.all

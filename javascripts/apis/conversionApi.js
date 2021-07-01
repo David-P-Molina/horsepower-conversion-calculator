@@ -32,6 +32,7 @@ class ConversionApi {
           .then(response => response.json())
         .then(json => { 
             Conversion.displayUserConversion(json);
+            ConversionApi.fetchConversions();
         })
     }
 }

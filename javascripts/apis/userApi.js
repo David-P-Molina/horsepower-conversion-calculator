@@ -15,7 +15,7 @@ class UserApi {
         .then(response => response.json())
         .then(json => {
             let currentUser = User.findOrCreateBy(json.data.attributes)
-            User.displayUsername(currentUser.username);
+            currentUser.displayUsername();
             Conversion.enableConversionForm();
             json.data.attributes.conversions.forEach(convert => {
                 Conversion.displayUserConversion(convert);

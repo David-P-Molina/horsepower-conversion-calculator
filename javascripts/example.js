@@ -1,4 +1,4 @@
-dclass Example {
+class Example {
     static handleExampleBtn() {
         const animalButtons = document.getElementById('animal-conversion-options')
         mainDisplay.innerHTML = `
