@@ -39,6 +39,15 @@ In terminal execute:
 ```shell
  $ open index.html
 ```
+
+## Future Features
+
+### Interactive Examples Tab
+Has several pictures of cars/planes to be converted with buttons, user can click on a button and a car/plane to calculate the animal based on that feature.
+    [x] Have pictures and some base code
+    [ ] Add to Navbar
+    [ ] Create display functionality
+    
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/David-P-Molina/strange-conversion-calculator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/David-P-Molina/strange-conversion-calculator/CODE_OF_CONDUCT.md).
