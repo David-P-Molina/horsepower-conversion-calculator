@@ -26,6 +26,8 @@ body {
 #error {
     background-color: red;
     font-size:x-large;
+    color: white;
+    padding: 1rem;
   }
 .hide {
     display: none;
