@@ -20,7 +20,15 @@ class UserApi {
             json.data.attributes.conversions.forEach(convert => {
                 Conversion.displayUserConversion(convert);
             })
-
         })
+        .catch(this.displayError)
+    }
+    static displayError(error) {
+        errorDisplay.innerText = error
+        errorDisplay.classList.remove("hide")
+        setTimeout(() => {
+            errorDisplay.innerText = ""
+            errorDisplay.classList.add("hide")
+        }, 3000)
     }
 }

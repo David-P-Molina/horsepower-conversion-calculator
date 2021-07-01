@@ -6,6 +6,14 @@ class MeasurementApi {
     .then(json => json.data.forEach(obj => {
         Measurement.findOrCreateBy(obj.attributes)
         }))
-    // .catch(handleError)
+    .catch(this.displayError)
+    }
+    static displayError(error) {
+        errorDisplay.innerText = error
+        errorDisplay.classList.remove("hide")
+        setTimeout(() => {
+            errorDisplay.innerText = ""
+            errorDisplay.classList.add("hide")
+        }, 3000)
     }
 }

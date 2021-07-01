@@ -7,6 +7,7 @@ class ConversionApi {
             let object = obj.attributes
             Conversion.findOrCreateBy(object)
         }))
+        .catch(this.displayError)
     }
     static submitConversionData(e) {
         e.preventDefault();
@@ -34,5 +35,13 @@ class ConversionApi {
             Conversion.displayUserConversion(json);
             ConversionApi.fetchConversions();
         })
+    }
+    static displayError(error) {
+        errorDisplay.innerText = error
+        errorDisplay.classList.remove("hide")
+        setTimeout(() => {
+            errorDisplay.innerText = ""
+            errorDisplay.classList.add("hide")
+        }, 3000)
     }
 }
