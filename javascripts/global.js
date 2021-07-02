@@ -7,6 +7,7 @@ const homeBtn = document.getElementById('home-btn')
 const exampleConversions = document.getElementById('example-conversions')
 const submittedConversions = document.getElementById('submitted-conversions')
 const sources = document.getElementById('sources')
+const backgroundBtn = document.getElementById('color-change')
 
 //Form Variables
 const userFormDiv = document.getElementById('new-user')

@@ -8,8 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     homeBtn.addEventListener('click', handleHomeBtn)
     sources.addEventListener('click', Measurement.handleSourceList)
     submittedConversions.addEventListener('click', handleAllConversions)
+    backgroundBtn.addEventListener('click', backgroundChange)
     // exampleConversions.addEventListener('click', handleExampleConversions)
 })
+//.style.color = "blue";
+//Background Button
+const backgroundChange = () => {
+    document.body.style.backgroundColor = (document.body.style.backgroundColor === "white") ? "black" : "white" 
+}
 
 //Fetch Calls
 const getFetchCalls = () => {
@@ -37,8 +43,8 @@ const isIncrementing = () => {
     return (pauseBtn.innerText === "Pause") ? true : false
 }
 const startHpCounter = () => {
-    setInterval(addOneHp, 1500)
-    setInterval(multiplyAnimalHpEquivalent,1500)
+    setInterval(addOneHp, 750)
+    setInterval(multiplyAnimalHpEquivalent,750)
 }
 const addOneHp = () => {
     if (isIncrementing()) {

@@ -1,0 +1,10 @@
+TASK: create a button on the page that turns background from white to black and when you click it turns it back to original color
+#global.Js
+create a const =selects a part of the document
+
+#index.
+create a button
+
+//index.js 
+create a boolean function with one color as true and other as false
+addEventListener
