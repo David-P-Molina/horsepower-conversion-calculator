@@ -30,6 +30,7 @@ class User {
         Conversion.handleConversionForm();
         userMadeConversionList.innerHTML = ""
     }
+    
     displayUsername(){
         const welcomeGreeting = 
         `<h3> Welcome ${this.username}!</h3>

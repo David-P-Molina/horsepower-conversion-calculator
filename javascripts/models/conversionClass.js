@@ -21,8 +21,8 @@ class Conversion {
         this.findById(conversionObj.id) || new Conversion(conversionObj)
     }
     static handleConversionForm() {
-    const conversionForm =
-    `<h3>New Conversion</h3>
+        const conversionForm =
+        `<h3>New Conversion</h3>
         <form id="conversion-submit-form">
             <label for="conversion name">Conversion Name:</label><br>
             <input type="text" name="name" id="conversion-name" class="conversion-inputs" disabled><br>

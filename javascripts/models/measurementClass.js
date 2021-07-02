@@ -34,6 +34,7 @@ class Measurement {
             }
         }
     }
+    //Example tab functionality
     // addMeasurementBtn() {
     //     const button = document.createElement("button")
     //     button.value = this.hp_equivalent

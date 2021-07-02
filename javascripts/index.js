@@ -6,15 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBtn.addEventListener('click', resetHpNumber)
     pauseBtn.addEventListener('click', pauseHpNumber)
     homeBtn.addEventListener('click', handleHomeBtn)
-    // exampleConversions.addEventListener('click', handleExampleConversions)
     sources.addEventListener('click', Measurement.handleSourceList)
     submittedConversions.addEventListener('click', handleAllConversions)
+    // exampleConversions.addEventListener('click', handleExampleConversions)
 })
+
 //Fetch Calls
 const getFetchCalls = () => {
     MeasurementApi.fetchMeasurements()
     ConversionApi.fetchConversions()
 }
+
 //Main-Section Functionality
 const handleHomeBtn = () => {
     mainDisplay.innerHTML = `<h1>Calculate the strength of Various Animals</h1>
@@ -29,6 +31,7 @@ const handleAllConversions = () => {
     mainDisplay.innerHTML = '<div id="all-conversions-list"> </div>'
     Conversion.renderAll();
 }
+
 //Side-Bar Functionality
 const isIncrementing = () => {
     return (pauseBtn.innerText === "Pause") ? true : false
