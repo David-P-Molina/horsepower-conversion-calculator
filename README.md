@@ -2,7 +2,7 @@
 Thank You for using the Horsepower Converter! 
 Have you ever wondered how many squirrels it would take to power your car, or how many squirrels it would take to launch a space shuttle?? Now there is an app for that.
 Now you have the ability to calculate these numbers. Is this a useful app that pushes the knowledge of humanity farther? Not at all but I hope that you are entertained and can impress your friends with random knowledge about converting HP!
-This SPA(Single Page Application) uses a Rails API for the backend. (https://github.com/David-P-Molina/horsepower-conversion-calculator-backend)
+This SPA(Single Page Application) uses a Rails API for the backend. (https://github.com/David-P-Molina/horsepower-conversion-backend)
 
 ## Installation
 
