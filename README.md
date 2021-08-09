@@ -1,4 +1,4 @@
-# Horse-Power Converter
+# Horsepower Converter
 Thank You for using the Horsepower Converter! 
 Have you ever wondered how many squirrels it would take to power your car, or how many squirrels it would take to launch a space shuttle?? Now there is an app for that.
 Now you have the ability to calculate these numbers. Is this a useful app that pushes the knowledge of humanity farther? Not at all but I hope that you are entertained and can impress your friends with random knowledge about converting HP!
@@ -14,7 +14,7 @@ cd horsepower-conversion-calculator
 ```
 #### Backend
 ```shell
-git clone https://github.com/David-P-Molina/horsepower-conversion-calculator-backend
+git clone https://github.com/David-P-Molina/horsepower-conversion-backend
 ```
 ## Starting The Application
 ### Install dependencies
