@@ -18,6 +18,9 @@ git clone https://github.com/David-P-Molina/horsepower-conversion-backend
 ```
 ## Starting The Application
 ### Install dependencies
+For Ruby installation instructions visit 
+https://www.ruby-lang.org/en/documentation/installation/
+
 #### Backend
 And then execute :
 
